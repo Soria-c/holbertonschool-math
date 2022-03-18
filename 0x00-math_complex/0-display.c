@@ -17,6 +17,8 @@ void display_complex_number(complex c)
 	}
 	else if (!c.im)
 		printf("%.f\n", c.re);
+	else if (!c.re)
+		printf("%.f\n", c.im);
 	else
 		printf("%.f + %.fi\n", c.re, c.im);
 }
