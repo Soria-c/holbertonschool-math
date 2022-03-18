@@ -9,11 +9,11 @@
 void display_complex_number(complex c)
 {
 	if (!c.re && c.im)
-		printf("0 + %.1fi\n", c.im);
+		printf("0 + %.fi\n", c.im);
 	else if (c.re && !c.im)
-		printf("%.1f\n", c.re);
+		printf("%.f\n", c.re);
 	else if (!c.re && !c.im)
 		printf("0\n");
 	else
-		printf("%.1f + %.1fi\n", c.re, c.im);
+		printf("%.f + %.fi\n", c.re, c.im);
 }
