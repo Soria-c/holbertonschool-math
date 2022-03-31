@@ -25,9 +25,10 @@ int mandelbrot(int re, int im)
 	return (1);
 }
 /**
- * main - creates the pgm file
+ * main - creates the pgm file.
+ * Return: 0 if succesful.
  */
-void main(void)
+int main(void)
 {
 	int i, j;
 	int w = 1000, h = 1000;
@@ -44,4 +45,5 @@ void main(void)
 		fprintf(pgmimg, "\n");
 	}
 	fclose(pgmimg);
+	return (0);
 }
