@@ -9,7 +9,8 @@
 double rectangle_method(double a, double b, int steps)
 {
 	double width = (b - a) / steps;
-	double area = x = 0;
+	double area = 0;
+	double x = 0;
 	int i;
 
 	for (i = 0; i < steps; i++, x += width)
