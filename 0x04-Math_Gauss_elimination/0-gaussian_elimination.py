@@ -17,7 +17,7 @@ def gaussian_elimination(A, b):
                 return
             else:
                 c[j] = np.array(c[i] * ((c[j][i] / c[i][i]) * -1)) + c[j]
-    r = np.zeros(shape=lenght).astype(int)
+    r = np.zeros(shape=lenght)
     x = c[lenght - 1][l2 - 1] / c[lenght - 1][l2 - 2]
     r[lenght - 1] = x
     for i in range(lenght - 2, -1, -1):
