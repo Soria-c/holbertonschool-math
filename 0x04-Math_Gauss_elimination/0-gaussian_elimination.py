@@ -22,7 +22,7 @@ def gaussian_elimination(A, b):
     if ( x.is_integer()):
         r[lenght - 1] = int(x)
     else:
-        r[lenght - 1] = x
+        r[lenght - 1] = round(x, 9)
     for i in range(lenght - 2, -1, -1):
         summ = 0
         for j in range(i, -1, -1):
@@ -33,5 +33,5 @@ def gaussian_elimination(A, b):
         if ( x.is_integer()):
             r[i] = int(x)
         else:
-            r[i] = x
+            r[i] = round(x, 9)
     return r
