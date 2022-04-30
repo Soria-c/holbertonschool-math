@@ -17,12 +17,9 @@ def gaussian_elimination(A, b):
                 return
             else:
                 c[j] = np.array(c[i] * ((c[j][i] / c[i][i]) * -1)) + c[j]
-    r = np.ndarray((lenght), dtype=object)
+    r = np.zeros(shape=lenght)
     x = c[lenght - 1][l2 - 1] / c[lenght - 1][l2 - 2]
-    if ( x.is_integer()):
-        r[lenght - 1] = int(x)
-    else:
-        r[lenght - 1] = round(x, 9)
+    r[lenght - 1] = x
     for i in range(lenght - 2, -1, -1):
         summ = 0
         for j in range(i, -1, -1):
@@ -30,8 +27,5 @@ def gaussian_elimination(A, b):
         for k in range(i + 1, lenght + 1):
             summ += c[i][k]
         x = summ / c[i][i]
-        if ( x.is_integer()):
-            r[i] = int(x)
-        else:
-            r[i] = round(x, 9)
+        r[i] = x
     return r
