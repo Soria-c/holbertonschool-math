@@ -12,7 +12,11 @@ def gaussian_elimination(A, b):
     l2 = len(c[0])
     for i in range(0, lenght - 1):
         for j in range(i + 1, lenght):
-            c[j] = np.array(c[i] * ((c[j][i] / c[i][i]) * -1)) + c[j]
+            if not(c[i][i]):
+                print("You can't divide by zero!")
+                return
+            else:
+                c[j] = np.array(c[i] * ((c[j][i] / c[i][i]) * -1)) + c[j]
     r = np.zeros(shape=lenght)
     x = c[lenght - 1][l2 - 1] / c[lenght - 1][l2 - 2]
     r[lenght - 1] = x
